@@ -7,6 +7,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError");
+const flash = require("connect-flash");
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 app.engine("ejs", ejsMate);
+
+app.use(flash());
 
 //=================================================================================================
 
