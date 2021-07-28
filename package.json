@@ -1,0 +1,26 @@
+{
+  "name": "ece_learning_tool",
+  "version": "1.0.0",
+  "description": "This web application is a learning and practice tool for students enrolling in ECE course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuyBritish/ECE_Learning_Tool.git"
+  },
+  "author": "Khai Bui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuyBritish/ECE_Learning_Tool/issues"
+  },
+  "homepage": "https://github.com/GuyBritish/ECE_Learning_Tool#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0"
+  }
+}
