@@ -22,9 +22,13 @@ app.engine("ejs", ejsMate);
 
 //=================================================================================================
 
+const toolRoutes = require("./routes/tools");
+
 app.get("/", (req, res) => {
 	res.render("general/home");
 });
+
+app.use("/tools", toolRoutes);
 
 app.all("*", (req, res, next) => {
 	next(new ExpressError(404, "Page Not Found"));
