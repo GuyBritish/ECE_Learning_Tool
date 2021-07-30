@@ -8,7 +8,7 @@
     <div class="row">
         <div class="calcFrame col-md-6">
             
-            <form class="mb-4" action="/tools/baseconverter" method="POST">
+            <form class="mb-4" action="">
                 
                 <div class="mb-4">
                     <label for="fromNum" class="form-label"> <strong>Enter Number</strong> </label>
@@ -36,14 +36,14 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary"> Convert </button>
+                <button type="button" class="btn btn-primary" id="submitBtn"> Convert </button>
                 <button type="reset" class="btn btn-secondary ms-3"> Reset </button>
                 
             </form>
 
             <label for="result" class="form-label"> <strong>Result:</strong> </label>
             <div class="text-wrap">
-                <textarea name="resultArea" id="result" cols="85" rows="3" disabled> </textarea>
+                <textarea class="form-control" name="resultArea" id="result" cols="85" rows="3" readonly> </textarea>
                 <span class="copyIcon" id="copyToClipboard"> 
                     <img class="icon" src="/assets/clipboard.svg" alt="clipboard">
                 </span>
@@ -59,12 +59,12 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Accordion Item #1
+                      Step 1: Convert to decimal
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>Convert from source base to decimal</strong> by multiplying each digit with the base raised to the power of the digit number (starting at 0, right -> left).
                     </div>
                   </div>
                 </div>
@@ -72,12 +72,12 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Accordion Item #2
+                      Step 2: Convert to result base
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>Convert from decimal to destination base</strong> by divding the decimal with the base while the quotient is not 0 and the remainders are the digits of the destination number.
                     </div>
                   </div>
                 </div>                
