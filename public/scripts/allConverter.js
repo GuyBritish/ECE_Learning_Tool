@@ -4,7 +4,11 @@ const copyBtn = document.getElementById("copyToClipboard");
 //=================================================================================================
 
 copyBtn.addEventListener("click", function (event) {
-	event.preventDefault();
 	resultText.select();
 	document.execCommand("copy");
+	if (window.getSelection) {
+		window.getSelection().removeAllRanges();
+	} else if (document.selection) {
+		document.selection.empty();
+	}
 });
