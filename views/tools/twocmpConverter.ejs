@@ -1,3 +1,95 @@
 <%- layout("layouts/boilerplate") %> 
 
+<link rel="stylesheet" href="/stylesheets/converter.css">
+
 <h2> 2's Complement Converter </h2>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+
+            <form class="mb-5" action="">
+
+                <div class="mb-2">
+                    <label for="fromNum" class="form-label"> <strong>Enter Decimal Number</strong> </label>
+                    <input type="text" class="form-control inpText" id="decNum" aria-describedby="fromNumHelp" name="num" autofocus>
+                    <div id="fromNumHelp" class="form-text">
+                        Can be positive or negative.
+                    </div>
+                </div>
+
+                <label for="result" class="form-label"> <strong>2's Complement Result</strong> </label>
+                <div class="text-wrap mb-2">
+                    <textarea class="form-control" name="resultArea" id="result" cols="85" rows="2" readonly> </textarea>
+                    <span class="copyIcon" id="copyToClipboard"> 
+                        <img class="icon" src="/assets/clipboard.svg" alt="clipboard">
+                    </span>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="submitBtn"> Convert </button>
+                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn"> Reset </button>
+
+            </form>
+
+            <form class="mb-4" action="">
+
+                <div class="mb-2">
+                    <label for="fromNum" class="form-label"> <strong>Enter 2's Complement</strong> </label>
+                    <input type="text" class="form-control inpText" id="decNum" aria-describedby="fromNumHelp" name="num" autofocus>
+                    <div id="fromNumHelp" class="form-text">
+                        Choose a 2's complement binary number.
+                    </div>
+                </div>
+
+                <label for="result" class="form-label"> <strong>Decimal Result</strong> </label>
+                <div class="text-wrap mb-2">
+                    <textarea class="form-control" name="resultArea" id="result" cols="85" rows="2" readonly> </textarea>
+                    <span class="copyIcon" id="copyToClipboard"> 
+                        <img class="icon" src="/assets/clipboard.svg" alt="clipboard">
+                    </span>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="submitBtn"> Convert </button>
+                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn"> Reset </button>
+
+            </form>
+
+        </div>
+
+        <div class="helpBoard col-md-6">
+            <h3 class="mt-3 mb-3"> 2's complement </h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quos ab possimus explicabo pariatur nesciunt delectus qui aspernatur cumque fuga consequatur, officiis repellendus sint minus! Aliquid ut repellendus nobis sint? </p>
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Step 1: Convert to decimal
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Convert from source base to decimal</strong> by multiplying each digit with the base raised to the power of the digit number (starting at 0, right -> left).
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Step 2: Convert to result base
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Convert from decimal to destination base</strong> by divding the decimal with the base while the quotient is not 0 and the remainders are the digits of the destination number.
+                    </div>
+                  </div>
+                </div>                
+        </div>
+
+    </div>
+
+    <a href="../../"> Back </a>
+
+</div>
