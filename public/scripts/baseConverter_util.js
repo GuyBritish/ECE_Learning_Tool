@@ -1,7 +1,7 @@
 const resultText = document.getElementById("result");
 const copyBtn = document.getElementById("copyToClipboard");
 const resetBtn = document.getElementById("resetBtn");
-const inputTxt = document.getElementsByClassName("fromNum");
+const inputTxt = document.getElementById("fromNum");
 
 //=================================================================================================
 
