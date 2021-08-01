@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-6">
 
-            <form class="mb-5" action="">
+            <form class="mb-5 smlFrame1" action="">
 
                 <div class="mb-2">
                     <label for="fromNum" class="form-label"> <strong>Enter Decimal Number</strong> </label>
@@ -20,22 +20,22 @@
 
                 <label for="result" class="form-label"> <strong>2's Complement Result</strong> </label>
                 <div class="text-wrap mb-2">
-                    <textarea class="form-control" name="resultArea" id="result" cols="85" rows="2" readonly> </textarea>
+                    <textarea class="form-control" name="resultArea" id="2cmpResult" cols="85" rows="2" readonly> </textarea>
                     <span class="copyIcon" id="copyToClipboard"> 
                         <img class="icon" src="/assets/clipboard.svg" alt="clipboard">
                     </span>
                 </div>
 
-                <button type="button" class="btn btn-primary" id="submitBtn"> Convert </button>
-                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn"> Reset </button>
+                <button type="button" class="btn btn-primary" id="submitBtn1"> Convert </button>
+                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn1"> Reset </button>
 
             </form>
 
-            <form class="mb-4" action="">
+            <form class="mb-4 smlFrame2" action="">
 
                 <div class="mb-2">
                     <label for="fromNum" class="form-label"> <strong>Enter 2's Complement</strong> </label>
-                    <input type="text" class="form-control inpText" id="decNum" aria-describedby="fromNumHelp" name="num" autofocus>
+                    <input type="text" class="form-control inpText" id="2cmpNum" aria-describedby="fromNumHelp" name="num" autofocus>
                     <div id="fromNumHelp" class="form-text">
                         Choose a 2's complement binary number.
                     </div>
@@ -43,14 +43,14 @@
 
                 <label for="result" class="form-label"> <strong>Decimal Result</strong> </label>
                 <div class="text-wrap mb-2">
-                    <textarea class="form-control" name="resultArea" id="result" cols="85" rows="2" readonly> </textarea>
+                    <textarea class="form-control" name="resultArea" id="decResult" cols="85" rows="2" readonly> </textarea>
                     <span class="copyIcon" id="copyToClipboard"> 
                         <img class="icon" src="/assets/clipboard.svg" alt="clipboard">
                     </span>
                 </div>
 
-                <button type="button" class="btn btn-primary" id="submitBtn"> Convert </button>
-                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn"> Reset </button>
+                <button type="button" class="btn btn-primary" id="submitBtn2"> Convert </button>
+                <button type="reset" class="btn btn-secondary ms-3" id="resetBtn2"> Reset </button>
 
             </form>
 
@@ -93,3 +93,6 @@
     <a href="../../"> Back </a>
 
 </div>
+
+<script type="text/javascript" src="/scripts/2cmpConverter_util.js"></script>
+<script type="text/javascript" src="/scripts/2cmpConverter.js"></script>
