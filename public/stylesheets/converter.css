@@ -4,6 +4,18 @@
 	border-radius: 1em;
 }
 
+.smlFrame1 {
+	background-color: #4ecf90;
+	padding: 1rem 1rem;
+	border-radius: 1em;
+}
+
+.smlFrame2 {
+	background-color: #cdcf4e;
+	padding: 1rem 1rem;
+	border-radius: 1em;
+}
+
 .helpBoard {
 	padding: 0 30px;
 }
