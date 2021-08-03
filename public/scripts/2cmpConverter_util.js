@@ -1,9 +1,9 @@
-const resultText1 = document.getElementById("result");
+const resultText1 = document.getElementById("2cmpResult");
 const copyBtn1 = document.getElementById("copyToClipboard1");
 const resetBtn1 = document.getElementById("resetBtn1");
 const inputTxt1 = document.getElementById("decNum");
 
-const resultText2 = document.getElementById("result");
+const resultText2 = document.getElementById("decResult");
 const copyBtn2 = document.getElementById("copyToClipboard2");
 const resetBtn2 = document.getElementById("resetBtn2");
 const inputTxt2 = document.getElementById("2cmpNum");
