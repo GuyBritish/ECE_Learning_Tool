@@ -27,12 +27,10 @@ function addOne(num) {
 			}
 		}
 	}
-	console.log(ans);
 	return ans;
 }
 
 function negate(num) {
-	console.log(num);
 	let ans = "";
 	for (let i = 0; i <= num.length - 1; ++i) {
 		if (num[i] == "0") {
@@ -42,7 +40,6 @@ function negate(num) {
 		}
 	}
 	ans = "1" + ans;
-	console.log(ans);
 	return ans;
 }
 
@@ -50,10 +47,21 @@ function decToBin(num) {
 	return parseInt(num).toString(2);
 }
 
+function binToDec(num) {
+	console.log(num);
+	let res = 0;
+	for (let i = 0; i < num.length; ++i) {
+		val = parseInt(num[num.length - i - 1]);
+		res += Math.pow(2, i) * val;
+	}
+	console.log(res);
+	return res;
+}
+
 function signTrim(num, sign) {
 	let ans = "";
 	let start = 0;
-	while (num[start + 1] == sign) {
+	while (num[start] == num[start + 1] && num[start + 1] == sign) {
 		++start;
 	}
 	for (let i = start; i <= num.length - 1; ++i) {
@@ -73,7 +81,12 @@ submitBtn1.addEventListener("click", function (event) {
 			result2Cmp.innerHTML = signTrim(res, "1");
 		} else {
 			let res = decToBin(x);
-			result2Cmp.innerHTML = signTrim(res, "0");
+			res = signTrim(res, "0");
+			if (res == "0") {
+				result2Cmp.innerHTML = res;
+			} else {
+				result2Cmp.innerHTML = "0" + res;
+			}
 		}
 	} catch (err) {
 		result2Cmp.innerHTML = err;
@@ -83,6 +96,12 @@ submitBtn1.addEventListener("click", function (event) {
 submitBtn2.addEventListener("click", function (event) {
 	try {
 		let x = number2Cmp.value;
+		if (x[0] == "1") {
+			let res = binToDec(addOne(negate(x).slice(1)));
+			resultDec.innerHTML = "-" + res;
+		} else {
+			resultDec.innerHTML = binToDec(x);
+		}
 	} catch (err) {
 		resultDec.innerHTML = err;
 	}
