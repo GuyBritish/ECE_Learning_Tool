@@ -1,12 +1,12 @@
 const resultText1 = document.getElementById("result");
 const copyBtn1 = document.getElementById("copyToClipboard1");
 const resetBtn1 = document.getElementById("resetBtn1");
-const inputTxt1 = document.getElementsById("decNum");
+const inputTxt1 = document.getElementById("decNum");
 
 const resultText2 = document.getElementById("result");
 const copyBtn2 = document.getElementById("copyToClipboard2");
 const resetBtn2 = document.getElementById("resetBtn2");
-const inputTxt2 = document.getElementsById("2cmpNum");
+const inputTxt2 = document.getElementById("2cmpNum");
 
 //=================================================================================================
 
@@ -26,7 +26,12 @@ function clearText(txtArea, inpArea) {
 }
 
 function restrictInp(key) {
-	if ((key >= 48 && key <= 57) || (key >= 65 && key <= 90) || (key >= 97 && key <= 122)) {
+	if (
+		(key >= 48 && key <= 57) ||
+		(key >= 65 && key <= 90) ||
+		(key >= 97 && key <= 122) ||
+		key == 45
+	) {
 		return true;
 	} else {
 		return false;
