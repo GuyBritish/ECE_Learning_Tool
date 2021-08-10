@@ -36,6 +36,13 @@ const baseList = [
 	[36, ""],
 ];
 
+const operators = [
+	["add", "+"],
+	["subtract", "-"],
+	["multiply", "×"],
+	["divide", "÷"],
+];
+
 //=================================================================================================
 
-module.exports = { baseList };
+module.exports = { baseList, operators };
