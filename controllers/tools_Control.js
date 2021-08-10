@@ -10,14 +10,14 @@ const twocmpConverterPage = (req, res) => {
 	res.render("tools/twocmpConverter");
 };
 
-//=================================================================================================
-
-const baseConvert = (req, res) => {};
+const baseCalculator = (req, res) => {
+	res.render("tools/baseCalculator", { baseList: data.baseList, operatorList: data.operators });
+};
 
 //=================================================================================================
 
 module.exports = {
 	baseConvertPage,
 	twocmpConverterPage,
-	baseConvert,
+	baseCalculator,
 };
