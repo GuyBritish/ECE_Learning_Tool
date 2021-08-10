@@ -12,14 +12,14 @@
                 
                 <div class="mb-4">
                     <label for="fromNum" class="form-label"> <strong>Enter Number</strong> </label>
-                    <input type="text" class="form-control inpText" id="fromNum" aria-describedby="fromNumHelp" name="num" autofocus>
+                    <input type="text" class="form-control inpText" id="fromNum" aria-describedby="fromNumHelp" name="fromNum" autofocus>
                     <div id="fromNumHelp" class="form-text">
                         Choose a number from any available base.
                     </div>
                 </div>
                 
                 <div class="mb-4">
-                    <label for="fromBse" class="form-label"> <strong>From Base:</strong> </label>
+                    <label for="fromBase" class="form-label"> <strong>From Base:</strong> </label>
                     <select class="form-select" aria-label="Select current base" id="fromBase" name="fromBase">
                         <% for (let base of baseList) { %>
                             <option value="<%=base[0]%>" <%= base[0]==10 ? "selected" : "" %>> <%=base[0]%> <%=base[1]%>  </option> 
